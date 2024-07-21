@@ -15,7 +15,7 @@ function ProductCategories() {
   //   links
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products/categories").then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setProductCategies(res.data);
     });
   }, []);
@@ -37,13 +37,14 @@ function ProductCategories() {
   }, [category]);
   const handleAddCart = (product) => {
     // console.log(product.id)
+    toast.error("Succes Add To Cart")
     addToCart(product);
-    toast.success("Succes Add To Cart")
   };
 
   return (
     <>
-    <ToastContainer />
+    {/* <ToastContainer /> */}
+    <ToastContainer position="top-center" />
       <h1 className="text-center m-2">Product Categories</h1>
       <li className="d-flex p-2 m-2  text-center category-item">
         <Link to="/products" className="category-link">

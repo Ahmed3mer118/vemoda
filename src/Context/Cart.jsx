@@ -43,8 +43,8 @@ function Cart() {
     <>
     <div className="cart container">
          <ToastContainer position="top-center" />
-      <h2>Cart</h2>
-      <h5>You Hava {cart.length} items </h5>
+      {/* <h2>Cart</h2> */}
+      <h5>You have {cart.length} items  </h5>
       <table>
         <thead>
           <tr>
@@ -121,7 +121,7 @@ function Cart() {
         {/* </Link> */}
       </div>
     </div>
-            {cart.length  &&<Footer /> }
+            {!cart  && <Footer /> }
       
       </>
   );

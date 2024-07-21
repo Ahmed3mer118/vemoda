@@ -34,7 +34,7 @@ function Favorite() {
   },[productFave])
   return (
     <>
-      <h1 className="text-center m-2">Your Favorite Producs</h1>
+      <h1 className="text-center m-2">Your Favorite Products</h1>
 
       <div className="products-favorite container mt-2">
         {productFave.map((proFave) => (
@@ -62,7 +62,7 @@ function Favorite() {
             </button>
           </div>
         ))}
-        {!productFave && (<div>No Product</div>)}
+        {!productFave.length && (<div className="text-center fs-3">No Product</div>)}
       </div>
     </>
   );
